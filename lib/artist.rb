@@ -3,6 +3,11 @@ class Artist
   include Concerns::Savable
 
   @@all = []
+
+  def self.all
+    @@all
+  end
+  
   attr_accessor :songs, :genres
 
   def initialize(name)
