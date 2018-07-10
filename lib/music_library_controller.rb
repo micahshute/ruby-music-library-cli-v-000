@@ -39,4 +39,16 @@ class MusicLibraryController
     end
   end
 
+  def list_songs_by_artist
+    puts "Enter an artist:"
+    artist = gets.strip
+    
+  end
+
+  def list(arr)
+    arr.each.with_index do |a,i|
+      puts "#{i+1}. #{a}"
+    end
+  end
+
 end
