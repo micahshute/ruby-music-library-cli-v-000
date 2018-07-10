@@ -55,6 +55,17 @@ class MusicLibraryController
     end
   end
 
+  def play_song
+    puts "Please enter the name of a song:"
+    song_name = gets.strip
+    song = Song.find_by_name(song_name)
+    if !!song
+      puts song.name
+    end
+  end
+
+  private
+
   def list(arr)
     arr.each.with_index do |a,i|
       puts "#{i+1}. #{a}"
