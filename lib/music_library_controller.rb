@@ -34,16 +34,14 @@ class MusicLibraryController
   end
 
   def list_genres
-    Genre.all.map{|g| g.name}.sort.uniq.each.with_index do |g,i|
-      puts "#{i+1}. #{g}"
-    end
+    list(Genre.all.map{|g| g.name}.sort.uniq)
   end
 
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     artist_name = gets.strip
     artist = Artist.find_by_name(artist_name)
-    list(artist.songs) unless artist.nil?
+
   end
 
   def list(arr)
