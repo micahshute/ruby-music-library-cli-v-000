@@ -7,13 +7,17 @@ class Genre
   def self.all
     @@all
   end
-  attr_accessor :songs, :artists, :name
+  attr_accessor :songs, :name
 
   def initialize(name)
     super(name)
     self.save
     @songs = []
     @artists = []
+  end
+
+  def artists
+    self.songs.map{|song| song.artist }.uniq
   end
 
 end
