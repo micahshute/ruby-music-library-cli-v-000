@@ -59,7 +59,7 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     song_name = gets.strip
-    song = Song.find_by_name(song_name)
+    song = Song.all.sort{|a,b| a.name <=> b.name}[song_name]
     binding.pry
     if !!song
       puts "Playing #{song.name} by #{song.artist.name}"
