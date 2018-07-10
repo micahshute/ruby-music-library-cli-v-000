@@ -13,7 +13,6 @@ class Genre
     super(name)
     self.save
     @songs = []
-    @artists = []
   end
 
   def artists
