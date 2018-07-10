@@ -14,7 +14,6 @@ class Artist
   def initialize(name)
     super(name)
     @songs = []
-    @genres = []
   end
 
   def add_song(song)
