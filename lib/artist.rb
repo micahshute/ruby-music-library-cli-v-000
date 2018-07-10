@@ -1,3 +1,4 @@
+require 'pry'
 class Artist
   extend Concerns::Findable
   include Concerns::Savable
@@ -24,6 +25,7 @@ class Artist
   end
 
   def add_genre(genre)
+    binding.pry
     genre.artists.push(self) unless genre.artists.include?(self)
     genre
   end
