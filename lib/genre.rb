@@ -1,7 +1,6 @@
 class Genre
   extend Concerns::Findable
-  include Concerns::Savable
-  
+
   @@all = []
 
   def self.all
