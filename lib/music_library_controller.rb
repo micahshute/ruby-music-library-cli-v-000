@@ -40,7 +40,7 @@ class MusicLibraryController
     artist_name = gets.strip
     artist = Artist.find_by_name(artist_name)
     if !!artist
-      songs = artist.songs.sort{|a,b| a.name <=> b.name}.map{|s| s.name + " - " + s.genre}
+      # songs = artist.songs.sort{|a,b| a.name <=> b.name}.map{|s| s.name + " - " + s.genre}
     else
       puts "Invalid name entered."
     end
