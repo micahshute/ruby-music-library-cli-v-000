@@ -19,4 +19,5 @@ class Artist
     self.genres.push(genre) unless self.genres.include?(genre)
   end
 
+
 end
