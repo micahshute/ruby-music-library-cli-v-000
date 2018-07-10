@@ -25,7 +25,7 @@ class Artist
 
   def add_genre(genre)
     self.genres.push(genre) unless self.genres.include?(genre)
-    genre.push(self) unless genre.artists.include?(self)
+    genre.artists.push(self) unless genre.artists.include?(self)
     genre
   end
 
