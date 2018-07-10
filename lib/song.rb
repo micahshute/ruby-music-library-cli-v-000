@@ -1,3 +1,4 @@
+require 'pry'
 class Song
   extend Concerns::Findable
   include Concerns::Savable
@@ -18,6 +19,7 @@ class Song
 
   def artist=(artist)
     @artist = artist
+    binding.pry
     artist.add_song(self) unless artist.songs.include?(self)
   end
 
