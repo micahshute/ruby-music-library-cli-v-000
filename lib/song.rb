@@ -16,6 +16,10 @@ class Song
     Song.new(name,artist,genre)
   end
 
+  def self.create_from_filename(filename)
+    self.new_from_filename(filename).save
+  end
+
   attr_accessor :name
   attr_reader :artist, :genre
 
