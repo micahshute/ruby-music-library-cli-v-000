@@ -2,14 +2,13 @@ module Concerns
 
 
   module Findable
-    @@all = []
 
     def all
-      @@all
+      self.all
     end
 
     def find_by_name(name)
-      @all.find{|inst| inst.name == name}
+      self.all.find{|inst| inst.name == name}
     end
 
     def find_or_create_by_name(name)
