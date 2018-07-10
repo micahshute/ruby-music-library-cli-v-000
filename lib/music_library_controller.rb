@@ -20,4 +20,10 @@ class MusicLibraryController
     input = gets.strip
     self.call unless input.downcase == "exit"
   end
+
+  def list_songs
+    Song.all.each do |song| 
+      puts song.name
+    end
+  end
 end
