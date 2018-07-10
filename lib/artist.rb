@@ -7,7 +7,7 @@ class Artist
   def self.all
     @@all
   end
-  
+
   attr_accessor :songs, :genres, :name
 
   def initialize(name)
