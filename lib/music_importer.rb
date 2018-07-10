@@ -6,7 +6,8 @@ class MusicImporter
   end
 
   def files
-    Dir[self.path + "/*"]
+    files = Dir[self.path + "/*"]
+    files.map{|file| file.split("/").last}
   end
 
 end
