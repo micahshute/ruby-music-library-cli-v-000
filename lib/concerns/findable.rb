@@ -3,17 +3,13 @@ module Concerns
 
   module Findable
 
-    def all
-      self.all
-    end
-
     def find_by_name(name)
       self.all.find{|inst| inst.name == name}
     end
 
     def find_or_create_by_name(name)
       find_attempt = self.find_by_name
-      !!find_attempt ? find_attempt : self.new(name)
+      !!find_attempt ? find_attempt : self.new(nasme)
     end
 
     def create(name)
@@ -31,7 +27,7 @@ module Concerns
     def initialize(name)
       self.name = name
     end
-    
+
     def save
       self.class.all << self
     end
