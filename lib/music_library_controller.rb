@@ -22,7 +22,7 @@ class MusicLibraryController
   end
 
   def list_songs
-    Song.all.map{|song| song.name}sort.each.with_index do |name, i|
+    Song.all.map{|song| song.name}.sort.each.with_index do |name, i|
       puts "#{i+1}. #{name}"
     end
   end
