@@ -14,7 +14,6 @@ class Song
     @name = name
     self.artist = artist unless artist.nil?
     self.genre = genre unless genre.nil?
-    self.save
   end
 
   def artist=(artist)
