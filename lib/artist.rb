@@ -2,6 +2,7 @@ class Artist
   extend Concerns::Findable
   include Concerns::Savable
 
+  @@all = []
   attr_accessor :songs, :genres
 
   def initialize(name)
