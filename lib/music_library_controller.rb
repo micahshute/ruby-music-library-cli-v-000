@@ -60,7 +60,7 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     song_name = gets.strip
     song = Song.all.sort{|a,b| a.name <=> b.name}[song_name.to_i]
-    binding.pry
+    # binding.pry
     if !!song
       puts "Playing #{song.name} by #{song.artist.name}"
     end
