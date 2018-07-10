@@ -13,11 +13,14 @@ class Artist
   def add_song(song)
     song.artist = self unless song.artist == self
     self.songs.push(song) unless self.songs.include?(song)
+    
+    song
   end
 
   def add_genre(genre)
     self.genres.push(genre) unless self.genres.include?(genre)
-    genre.push(self) unless genre.songs.include?(self)
+    genre.push(self) unless genre.artists.include?(self)
+    genre
   end
 
 
