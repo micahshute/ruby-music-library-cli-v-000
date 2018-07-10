@@ -3,7 +3,7 @@ class Song
   include Concerns::Savable
 
   attr_reader :artist, :genre
-  
+
   def initialize(name, artist=nil, genre=nil)
 
   end
@@ -14,6 +14,7 @@ class Song
   end
 
   def genre=(genre)
+    @genre = genre
     
   end
 
