@@ -42,8 +42,6 @@ class MusicLibraryController
     if !!artist
       songs = artist.songs.sort{|a,b| a.name <=> b.name}.map{|s| s.name + " - " + s.genre}
       list(songs)
-    else
-      self.list_songs_by_artist
     end
 
   end
