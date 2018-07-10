@@ -11,6 +11,7 @@ class Genre
 
   def initialize(name)
     super(name)
+    self.save
     @songs = []
     @artists = []
   end
