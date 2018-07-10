@@ -41,7 +41,7 @@ class MusicLibraryController
     artist_name = gets.strip
     artist = Artist.find_by_name(artist_name)
     if !!artist
-      songs = artist.songs.sort{|a,b| a.name <=> b.name}.map{|s| s.name + " - " + s.genre.name}
+      songs = artist.songs.sort{|a,b| b.name <=> a.name}.map{|s| s.name + " - " + s.genre.name}
       list(songs)
     end
   end
@@ -59,7 +59,7 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     song_name = gets.strip
-    song = Song.all.sort{|a,b| a.name <=> b.name}.uniq[song_name.to_i]
+    song = Song.all.sort{|a,b| a.name <=> b.name}[song_name.to_i]
     # binding.pry
     if !!song
       puts "Playing #{song.name} by #{song.artist.name}"
