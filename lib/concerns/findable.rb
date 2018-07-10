@@ -9,7 +9,7 @@ module Concerns
 
     def find_or_create_by_name(name)
       find_attempt = self.find_by_name(name)
-      !!find_attempt ? find_attempt : self.new(nasme)
+      !!find_attempt ? find_attempt : self.new(name)
     end
 
     def create(name)
