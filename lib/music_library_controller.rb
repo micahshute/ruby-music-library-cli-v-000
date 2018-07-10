@@ -22,7 +22,7 @@ class MusicLibraryController
     case input.downcase
     when "list songs"
       list_songs
-    when "list artist"
+    when "list artists"
       list_artists
     when "list genres"
       list_genres
