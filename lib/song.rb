@@ -2,6 +2,8 @@ class Song
   extend Concerns::Findable
   include Concerns::Savable
 
+  @@all = []
+  
   attr_accessor :name
   attr_reader :artist, :genre
 
