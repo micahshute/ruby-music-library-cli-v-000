@@ -25,8 +25,8 @@ class Artist
   end
 
   def add_genre(genre)
-    binding.pry
     genre.artists.push(self) unless genre.artists.include?(self)
+    binding.pry
     genre
   end
 
