@@ -1,10 +1,10 @@
 module Concerns
 
-  
+
   module Findable
     @@all = []
 
-    def all 
+    def all
       @@all
     end
 
@@ -23,10 +23,10 @@ module Concerns
       new_instance
     end
 
-    
+
   end
 
-  
+
   module Savable
 
     def initialize(name)
@@ -36,8 +36,8 @@ module Concerns
     def save
       self.class.all << self
     end
-    
+
   end
 
-  
+
 end
