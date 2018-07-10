@@ -8,7 +8,7 @@ class Artist
     @@all
   end
   
-  attr_accessor :songs, :genres
+  attr_accessor :songs, :genres, :name
 
   def initialize(name)
     super(name)
