@@ -8,7 +8,7 @@ class Artist
     @@all
   end
 
-  attr_accessor :songs, :genres, :name
+  attr_accessor :songs, :name
 
   def initialize(name)
     super(name)
@@ -27,6 +27,10 @@ class Artist
     self.genres.push(genre) unless self.genres.include?(genre)
     genre.artists.push(self) unless genre.artists.include?(self)
     genre
+  end
+
+  def genres
+    Genre.all.select{|g| g.artists.include?(self)}
   end
 
 
