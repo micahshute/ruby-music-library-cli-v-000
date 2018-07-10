@@ -50,7 +50,7 @@ class MusicLibraryController
     genre_name = gets.strip
     genre = Genre.find_by_name(genre_name)
     if !!genre
-      songs = genre.songs.sort{|a,b| a.name <=> b.name}.map{|s| s.name + " - " + s.artist.name}
+      songs = genre.songs.sort{|a,b| a.name <=> b.name}.map{|s| s.artist.name + " - " + s.name}
       list(songs)
     end
   end
