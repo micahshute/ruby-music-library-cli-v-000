@@ -19,7 +19,24 @@ class MusicLibraryController
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
     input = gets.strip
-    self.call unless input.downcase == "exit"
+    case input.downcase
+    when "list songs":
+      list_songs
+    when "list artist":
+      list_artists
+    when "list genres":
+      list_genres
+    when "list artist":
+      list_songs_by_artist
+    when "list genre":
+      list_songs_by_genre
+    when "play song":
+      play_song
+    when "exit":
+      return
+    else
+      call
+    end
   end
 
   def list_songs
