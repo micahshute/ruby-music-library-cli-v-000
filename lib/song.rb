@@ -3,6 +3,9 @@ class Song
   include Concerns::Savable
 
   @@all = []
+  def self.all
+    @@all
+  end
   
   attr_accessor :name
   attr_reader :artist, :genre
