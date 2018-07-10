@@ -3,12 +3,12 @@ class Song
   include Concerns::Savable
 
   @@all = []
-  
+
   def self.all
     @@all
   end
 
-  def self.new_by_filename(filename)
+  def self.new_from_filename(filename)
     data = filename.split(" - ")
     name = data[1]
     artist = data[0]
