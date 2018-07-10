@@ -11,7 +11,7 @@ class Genre
 
   def initialize(name)
     super(name)
-    self.save
+    self.save unless Genre.all.map{|g| g.name}.include?(name)
     @songs = []
   end
 
